@@ -44,7 +44,7 @@ gulp.task('clean', function() {
 gulp.task('css', function() {
   return gulp.src(config.paths.src + '/sass/main.+(scss|sass)')
     .pipe(development(sourcemaps.init()))
-    .pipe(sass())
+    .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer('last 2 version'))
     .pipe(development(sourcemaps.write()))
     .pipe(production(cssnano()))
