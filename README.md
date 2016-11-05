@@ -1,6 +1,6 @@
-# Kirby UltraKit
+# Craft UltraKit
 
-Kirby UltraKit is a workflow on top of the [Kirby StarterKit](https://github.com/getkirby/starterkit/tree/e9d1b84ebf8bba54693e61551dae9f3711e41aa9). Kirby-UltraKit is as much "opinionated-free" as possible. You're able to manage your own js and css libraries in whatever way you see fit.
+Craft UltraKit builds awesome assets for your craft site. (You can actually use it for any site)
 
 ### What's in it?
 
@@ -22,17 +22,13 @@ Make sure to setup a vhost with Mamp (or something alike) that will be serving t
 
 After having your Mamp settings in order, edit the proxy in gulpfile.js on line 25 to match the domain you just configured.
 
-Next up, clone the project files and install the dependencies. "--recursive" will also clone the Kirby StarterKit, however, any Kirby theme is possible to use.
+Next up, clone the project files and install the dependencies:
 
-    $ git clone --recursive https://github.com/wilbo/Kirby-UltraKit.git
-    $ cd Kirby-UltraKit
+    $ git clone https://github.com/wilbo/Craft-UltraKit.git
+    $ cd Craft-UltraKit
     $ npm install
 
-Include the javascript by adding the following line of code inside ./public/site/snippets/footer.php:
-
-    <?php echo js('assets/js/main.js') ?>
-
-Edit the .gitignore by removing "/public" on line 14 to track your site in git.
+Finally, download the Craft cms from [craftcms.com](https://craftcms.com/) and drag the content of the zip inside the project. Done!
 
 ### Usage:
 
