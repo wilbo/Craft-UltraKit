@@ -42,7 +42,7 @@ gulp.task('clean', function() {
 
 // css
 gulp.task('css', function() {
-  return gulp.src(config.paths.src + '/scss/main.+(scss|sass)')
+  return gulp.src(config.paths.src + '/sass/main.+(scss|sass)')
     .pipe(development(sourcemaps.init()))
     .pipe(sass())
     .pipe(autoprefixer('last 2 version'))
@@ -88,7 +88,7 @@ gulp.task('browser-sync', function() {
 // watch tasks
 
 gulp.task('watch:css', function() {
-  return gulp.watch(config.paths.src + '/scss/**/*.+(scss|sass)', gulp.series('css'));
+  return gulp.watch(config.paths.src + '/sass/**/*.+(scss|sass)', gulp.series('css'));
 });
 
 gulp.task('watch:js', function() {
