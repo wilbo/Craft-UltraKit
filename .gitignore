@@ -1,0 +1,8 @@
+.DS_Store
+node_modules
+bower_components
+
+# craft defaults
+craft/storage/runtime/*
+craft/storage/backups/*
+craft/storage/userphotos/*
