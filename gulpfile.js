@@ -137,7 +137,7 @@ gulp.task('watch:fonts', function() {
 });
 
 gulp.task('watch:build', function() {
-  return gulp.watch(['./craft/templates/**/*']);
+  return gulp.watch(config.source.html + '**/*.html', (done) => { browserSync.reload(); done(); }); // simply calling browserSync.reload doesnt work, it will break livereloading
 });
 
 gulp.task('watch', gulp.parallel('watch:css', 'watch:js', 'watch:images', 'watch:fonts', 'watch:build'));
